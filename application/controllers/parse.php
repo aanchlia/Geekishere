@@ -13,7 +13,7 @@ class Parse extends CI_Controller {
 
     public function index(){
         $edb = new EMAIL_TO_DB();
-        $edb->connect('mail.google.com', '', 'aanchlia@gmail.com', 'jaimahavir21');
+        $edb->connect('mail.google.com', '', 'aanchlia@gmail.com', '');
         $edb->do_action();
         $data = $this->em->getRepository('Model\OwnerInfo')->findOneBy(array('id' => 2));
         print_r($data);
