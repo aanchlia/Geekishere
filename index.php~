@@ -1,0 +1,7 @@
+<?php
+include_once("class.emailtodb.php");
+
+$edb = new EMAIL_TO_DB();
+$edb->connect('www.gmail.com', '', 'aanchlia@gmail.com', 'jaimahavir21');
+$edb->do_action();
+?>
