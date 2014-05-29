@@ -12,7 +12,7 @@ class Doctrine
         require APPPATH.'config/database.php';
 
         // include Doctrine's fancy ClassLoader class
-        require APPPATH.'libraries/Doctrine/Common/ClassLoader.php';
+        require_once APPPATH.'libraries/Doctrine/Common/ClassLoader.php';
 
 
         // load the Doctrine classes

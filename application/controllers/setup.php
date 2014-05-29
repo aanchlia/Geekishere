@@ -1,9 +1,9 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-require APPPATH . 'models/OwnerInfo.php';
+require APPPATH . 'models/Entity/OwnerInfo.php';
 require_once("class.emailtodb.php");
 
-class Parse extends CI_Controller {
+class Setup extends CI_Controller {
 
     public function __construct(){
         parent::__construct();
@@ -13,7 +13,7 @@ class Parse extends CI_Controller {
 
     public function index(){
 
-        $this->commonfloorparse->connect('mail.google.com', 'aanchlia@gmail.com', '');
+        $this->commonfloorparse->connect('{imap.gmail.com:993/imap/ssl/novalidate-cert/norsh}Inbox', 'aanchlia@gmail.com', '');
         $this->commonfloorparse->do_action();
         $data = $this->em->getRepository('Model\OwnerInfo')->findOneBy(array('id' => 2));
         print_r($data);
