@@ -94,9 +94,9 @@ class OwnerInfo
     /**
      * @var string
      *
-     * @Column(name="nintynineacres_id", type="string", length=128, nullable=true)
+     * @Column(name="ninetynineacres_id", type="string", length=128, nullable=true)
      */
-    private $nintynineacresId;
+    private $ninetynineacresId;
 
     /**
      * @var string
@@ -354,14 +354,14 @@ class OwnerInfo
     }
 
     /**
-     * Set nintynineacresId
+     * Set ninetynineacresId
      *
-     * @param string $nintynineacresId
+     * @param string $ninetynineacresId
      * @return OwnerInfo
      */
-    public function setNintynineacresId($nintynineacresId)
+    public function setNinetynineacresId($ninetynineacresId)
     {
-        $this->nintynineacresId = $nintynineacresId;
+        $this->ninetynineacresId = $ninetynineacresId;
     
         return $this;
     }
@@ -371,9 +371,9 @@ class OwnerInfo
      *
      * @return string 
      */
-    public function getNintynineacresId()
+    public function getNinetynineacresId()
     {
-        return $this->nintynineacresId;
+        return $this->ninetynineacresId;
     }
 
     /**

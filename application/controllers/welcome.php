@@ -23,7 +23,6 @@ class Welcome extends CI_Controller {
 	}
 
     public function mkEntity(){
-        //$this->load->library('Doctrine');
         return  $this->doctrine->generate_classes();
     }
 }

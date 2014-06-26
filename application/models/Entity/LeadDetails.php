@@ -24,7 +24,7 @@ class LeadDetails
     /**
      * @var string
      *
-     * @Column(name="property_id", type="string", length=128, nullable=false)
+     * @Column(name="property_id", type="string", length=256, nullable=false)
      */
     private $propertyId;
 
@@ -43,9 +43,9 @@ class LeadDetails
     private $emailId;
 
     /**
-     * @var integer
+     * @var string
      *
-     * @Column(name="phone", type="integer", nullable=false)
+     * @Column(name="phone", type="string", length=32, nullable=false)
      */
     private $phone;
 
@@ -55,6 +55,13 @@ class LeadDetails
      * @Column(name="message", type="text", nullable=true)
      */
     private $message;
+
+    /**
+     * @var integer
+     *
+     * @Column(name="email_sent", type="integer", nullable=false)
+     */
+    private $emailSent;
 
 
     /**
@@ -181,4 +188,28 @@ class LeadDetails
     {
         return $this->message;
     }
+
+    /**
+     * Set emailSent
+     *
+     * @param integer $emailSent
+     * @return LeadDetails
+     */
+    public function setEmailSent($emailSent)
+    {
+        $this->emailSent = $emailSent;
+
+        return $this;
+    }
+
+    /**
+     * Get emailSent
+     *
+     * @return integer
+     */
+    public function getEmailSent()
+    {
+        return $this->emailSent;
+    }
+
 }
